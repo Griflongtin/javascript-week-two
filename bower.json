@@ -1,0 +1,22 @@
+{
+  "name": "javascript-week-2",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Griffin P Longtin <griflongtin@live.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.20.1"
+  }
+}
