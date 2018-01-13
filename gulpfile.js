@@ -57,7 +57,7 @@ gulp.task('build', ['clean'], function(){
   gulp.start('jsBrowserify');
   gulp.start('bower');
 });
-gulp.task('server', function() {
+gulp.task('serve', function() {
   browserSync.init({
     server: {
       baseDir: "./",
