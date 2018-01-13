@@ -5,8 +5,9 @@ const apiKey = require('./../.env').apiKey;
 $(function() {
   $('#inputs').submit(function(event) {
     event.preventDefault();
-
-    const user = new DoctorAPIobj("back%20pain", 'or-portland', apiKey);
+    const symptoms = $('#symptoms').val().replace(/ /i, '%20');
+    const place = $('#place').val();
+    const user = new DoctorAPIobj(symptoms, place, apiKey);
 
     const data = user.callAPI(user.url);
 
