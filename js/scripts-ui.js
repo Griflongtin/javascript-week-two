@@ -12,8 +12,17 @@ $(function() {
 
     data.then(function(data){
       const doc = JSON.parse(data);
+      console.log(doc.data[0].profile);
       console.log(doc.data);
-      console.log(doc.data[1].profile);
+      for (var i = 0; i < 10; i++) {
+        $(".output").append(`<ul>
+          <h4>New Profile</h4>
+          <li>Name:${doc.data[i].profile.first_name} ${doc.data[i].profile.last_name}</li>
+          <img src="${doc.data[i].profile.image_url}" alt="${doc.data[i].profile.first_name} ${doc.data[i].profile.last_name}">
+          <li>Gender: ${doc.data[i].profile.gender}</li>
+          <li>BIO: ${doc.data[i].profile.bio}</li>
+          </ul>`)
+      }
     });
   });
 });
