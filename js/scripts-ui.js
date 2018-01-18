@@ -7,7 +7,10 @@ $(function() {
     event.preventDefault();
     const symptoms = $('#symptoms').val().replace(/ /i, '%20');
     const place = $('#place').val();
-    const user = new DoctorAPIobj(symptoms, place, apiKey);
+    const name = $('#name').val();
+    const urlSymptoms = 'query=' + symptoms + '&';
+    const urlName = 'name=' + name + '&';
+    const user = new DoctorAPIobj(urlSymptoms, urlName, place, apiKey);
 
     const data = user.callAPI(user.url);
 
